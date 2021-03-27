@@ -1,129 +1,87 @@
-# Überschrift Ebene 1
- div. 3D Druckteile für eine CNC3018Pro Fräse
+# Wooden train tracks
+Holzeisenbahnen sind ein faszinierende Spielzeug. Der bekannteste Anbieter ist Brio. Brio stellt hochwertige Schienen aus Buche Hartholz her.  
 
-## Überschrift Ebene 2
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+## Typische Maße der Schienen
+|     | 	Wert |
+| ------------- | ------------- |
+| Schiene Breite | 40 mm |
+| Schienen Höhe | 12 mm |
+| Rillen Abstand Mitte-Mitte | 26 mm |
+| Rillen Tiefe | 3 mm |
+| Rillen Breite | 6 mm |
+| Rillen Abstand Doppelspur Mitte-Mitte | 46 mm |
+| Stecker Durchmesser | ca. 11,5 mm |
+| Kurve Innenradius |  	182 mm |
+| Kurve Außenradius |  	222 mm |
+| Zapfen Durchmesser Durchmesser | ca. 11,5 mm |
+| Zapfenansatz Länge | 7 mm |
+| Zapfenansatz Breite | 6 mm |
+| Loch Durchmesser | ca. 16 mm |
+| Lochansatz Länge | 5 mm |
+| Loch Durchmesser | ca. 16 mm |
+| Lochansatz Breite | ca. 6,8 mm |
 
-Pfad: /images/xxx.png
-![Bildtext](/images/cable_mount_b2.png)
+## mathematische Zusammenhänge
+Das Grundmaß bei den Geraden ist die Länge 216 mm. Bei Brio ist dies die Schiene D.
+Alle weiteren Längen sind davon abgeleitet.
+
+### Geraden und Kurven
+| Track ID | Name            | Verbinder männlich | Verbinder Weiblich | Länge (mm) | Verhältniss | Radius               |
+|----------|-----------------|--------------------|--------------------|------------|-------------|----------------------|
+| A        | Mittlere Gerade | x                  | x                  | 144        | 2/3 D       |                      |
+| B        | Mittlere Gerade | x                  |                    | 144        | 2/3 D       |                      |
+| B        | Kurze Gerade    |                    | x                  | 144        | 2/3 D       |                      |
+| A1       | Kurze Gerade    | x                  | x                  | 108        | 1/2 D       |                      |
+| B1       | Kurze Gerade    | x                  |                    | 108        | 1/2 D       |                      |
+| C1       | Gerade          |                    | x                  | 108        | 1/2 D       |                      |
+| A2       | Mini Gerade     | x                  | x                  | 54         | 1/4 D       |                      |
+| B2       | Gerade          | x                  |                    | 54         | 1/4 D       |                      |
+| C2       | Gerade          |                    | x                  | 54         | 1/4 D       |                      |
+| A3       | Gerade          |                    |                    | 72         | 1/2 A       |                      |
+| D        | Lange Gerade    | x                  | x                  | 216        | D           |                      |
+| E        | Lange Kurve     | x                  | x                  |            |             | 182 innen 222 aussen |
+| EE       | Doppelkurve     | x                  | x                  |            |             | 182 innen            |
+| E1       | Kurze Kurve     | x                  | x                  |            |             | 90 innen             |
+| EE1      | Doppelkurve     | x                  | x                  |            |             | 91 innen             |
+| F        | Weiche          |                    |                    | 144        | 2/3 D       |                      |
+| G        | Weiche          |                    |                    | 144        | 2/3 D       |                      |
+| F1       | Weiche          |                    |                    | 144        | 2/3 D       |                      |
+| G1       | Weiche          |                    |                    | 144        | 2/3 D       |                      |
+| F2       | Weiche          |                    |                    | 144        | 2/3 D       |                      |
+| G2       | Weiche          |                    |                    | 144        | 2/3 D       |                      |
+| H        | Kreuz           | x                  | x                  | 108        | 1/2 D       |                      |
+| H1       | Kreuz           | x                  | x                  | 116        |             |                      |
+| H2       | Kreuz           | x                  | x                  | 144        | 2/3 D       | 45                   |
+| H3       | Kreuz           | X                  | x                  | 182        |             |                      |
+| I        | Weiche          | X                  | x                  | 144        | 2/3 D       | 182 innen            |
+| J        | Weiche          | X                  | x                  | 144        | 2/3 D       | 182 innen            |
+| K        | Kreuzung        | X                  | x                  | 216        | D           |                      |
+| K1       | Doppelgleis     | X                  | x                  | 216        | D           |                      |
+| L        | Weiche          | X                  | x                  | 144        | 2/3 D       | 182 innen            |
+| L1       | Weiche mech.    | X                  | x                  | 144        | 2/3 D       | 182 innen            |
+| M        | Weiche          | X                  | x                  | 144        | 2/3 D       | 182 innen            |
+| M1       | Weiche mech.    | X                  | x                  | 144        | 2/3 D       | 182 innen            |
+| N        | Rampengleis     | X                  | x                  | 216        | D           |                      |
+| N1       | Rampengleis     | X                  |                    | 216        | D           |                      |
+| O        | Weiche          | x                  | x                  |            |             | 90 innen             |
+| P        | Weiche          | x                  | x                  |            |             | 90 innen             |
+| O1       | Kurzweiche      | x                  | x                  | 108        | 1/2 D       | 90 innen             |
+| P1       | Kurzweiche      | x                  | x                  | 108        | 1/2 D       | 90 innen             |
+| Q        | Weiche 5x       |                    |                    | 144        | 2/3 D       |                      |
+| R        | Stopper         | x                  |                    | 40         |             |                      |
+| S        | Stopper         |                    | x                  | 40         |             |                      |
+| T        | T Weiche        | x                  | x                  | 216        | D           | 88 innen             |
+| U        | Rampe           | x                  |                    | 54         |             |                      |
+| V        | Rampe           |                    | x                  | 54         |             |                      |
+| X        | Weiche Stern    | x                  | x                  | 216        | D           | 88 innen             |
+
+
+
+![Brio-Track-Identifikation-Chart](https://i2.wp.com/www.kinder-technik.de/wp-content/uploads/2016/12/Brio-Track-Dimensions-Chart.png)
+![Brio-Track-Identifikation-Chart 2](https://i2.wp.com/www.kinder-technik.de/wp-content/uploads/2016/12/Brio-Track-Identifikation-Chart.png)
+
+
 
 ### Video als Gif
 ![Bildtext](/video/car_01_hoches_chassis_v62(1).gif)
-
-### Überschrift Ebene 3
-
-### Ordnerstruktur
-| Verzeichnis    | 	usage |
-| ------------- | ------------- |
-| images | rendered |
-|  stl  | stl 3d printer files |
-|  fusion 360  | cad   |
-|  step  | cad files|
-|  dxf  | lasercut |
-|  pdf  | drawing |
-
-
-
-### Tabelle
-### File formats
-
-| format    | 	usage |
-| ------------- | ------------- |
-|  stl  | 3d print, cad |
-|  step  | cad |
-|  dxf  | lasercut |
-|  pdf  | drawing |
-|   png | rendered |
-|  fusion 360  | cad  |
-### Material properties:  
-
-- Acrylic with 5 mm thickness is sufficiently stable for 3D printers and can be processed well with the laser cutter.
-- Transparent or transparent material leaves fingerprints, at the same time the correct position of the nuts is clearly visible.
-
-
-| Propertie     | value |
-| ------------- | ------------- |
-| material      | 5mm acrylic/plexi glas or 3mm aluminium  |
-| processing    | laser cut   |
-| diameter hole  | 5mm for M5 |
-| standard grid hole spacing | 20mm  |
-
-### Screws for t slot profile 20x20 
-
-- t slot nut deep 5,5 mm
-
-| material     | screw length |
-| ------------- | ------------- |
-| acrylic/plexi glas 5mm | 8...10 mm   |
-| aluminium 3mm    | 6...8 mm |
-
-### Beispiel externes Bild
-### Aluminium Slot 6 T-Nut profil
-
-- Example: Motedis Profile 20x20 B-Type slot 6 
-
-
-<img src="https://www.motedis.com/shop/images/product_images/popup_images/1_1.JPG" width="600"  title="Motedis Profile 20x20 B-Type slot 6">
-
-### Aluminium Slot 6 T-Nut profil
-
-### Beispiel externer Link
-Prototyping Board 270-Point Breadboard
-https://www.pololu.com/picture/view/0J3852
-
-### Code
-
-``` cpp
-// A dual extruder that uses a single stepper motor
-//#define SWITCHING_EXTRUDER
-#if ENABLED(SWITCHING_EXTRUDER)
-  #define SWITCHING_EXTRUDER_SERVO_NR 0
-  #define SWITCHING_EXTRUDER_SERVO_ANGLES { 0, 90 } // Angles for E0, E1[, E2, E3]
-  #if EXTRUDERS > 3
-    #define SWITCHING_EXTRUDER_E23_SERVO_NR 1
-  #endif
-#endif
-```
-
- Colons can be used to align columns.
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
- 
- Here's a sample video:
-
-![Sample Video](video/car_01_hoches_chassis_v62.mp4)
-![Sample Video](video/car_01_hoches_chassis_v62.avi)
- 
- >>>
-If you paste a message from somewhere else 
-that
-spans
-multiple lines,
-you can quote that without having to manually prepend `>` to every line!
->>>
-
-- {+ additions +}
-- [+ additions +]
-- {- deletions -}
-- [- deletions -]
-
-- [x] Completed task
-- [ ] Incomplete task
-    - [ ] Sub-task 1
-    - [x] Sub-task 2
-    - [ ] Sub-task 3
-
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=7p0hrpNaJ14
-" target="_blank"><img src="http://img.youtube.com/vi/7p0hrpNaJ14/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="480" height="360" border="10" /></a>
-
- <a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
-" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
- 
  
